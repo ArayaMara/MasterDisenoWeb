@@ -1,0 +1,40 @@
+body  { 
+    background-color: #35a7d4;
+    /*fondos
+    background-image: url(img/wall.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: left bottom;
+    */
+    color: black;
+    font-size: 15px;
+    text-align: top;
+    text-indent: 20px;
+  /*
+    word-spacing: 10px;
+    letter-spacing: 5px;
+*/
+   
+}
+
+#caja{
+    border: 5px solid black;
+    padding: 10px;
+    background: white;
+    color: blue;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: underline;
+   
+
+}
+
+h2{
+    background-color: blueviolet;
+    background-image: url(img/patron2.jpg);
+    color: coral;
+    border: 5px solid red;
+}
