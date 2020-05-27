@@ -17,4 +17,138 @@
 
     font-style: italic;
     font-size: 20px;
-text-align: center;}
+text-align: center;
+line-height: 80px;
+color: white;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+#menu{
+    background-color: #eee;
+
+}
+#menu ul li {
+   /* para alinearlos uno al lado del otro
+    display: inline-block; */
+
+    display: block;
+    float: left;
+
+    border-right:1px solid #ccc ;
+    
+}
+
+#menu ul li a {
+    color: #444 ;
+    padding: 10px;
+    display: block;
+}
+
+#menu ul li:hover{
+    background: rgba(90, 90, 185, 0.815)
+    cursor: pointer;
+}
+#menu ul li:hover a {
+color: white    ;
+
+
+}
+#principal{
+    width: 69%;
+    border:1px solid green;
+  float: left;
+}
+#lateral{
+    float: left;
+    width: 30%;
+    border: 1px solid red;
+    overflow-y: scroll;
+
+}
+
+#principal h1{
+    text-align: center;
+    color: rgba(26, 26, 169, 0.646);
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0px 5px 5px blue;
+}
+#principal .caja{
+    float: left;
+    border: 1px solid rgba(147, 147, 157, 0.815);
+    margin: 3px;
+    width: 49%;
+    height: 300px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    text-align:center;
+    background-color: rgba(204, 204, 204, 0.333);
+    text-transform: uppercase;
+    box-shadow: #444 0px 1px 5px;
+    border-radius: 20px 10px 10px 20px; /*de esta manera le redondeo los cuatro lados con estilos diferentes. sino podria ser 20px y aplica igual para todos*/
+    /*border border-radius: 999px; redondea todo mi cuadrado*/
+}
+
+.sombra-interior {
+
+ box-shadow: #444 0px 0px 20px inset !important;
+}
+
+#principal .caja h2{
+    
+margin-top: 140px;
+color: rgb(8, 8, 132);
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    border-top: #ccc solid 1px;
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+}
+
+.libre{
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    
+  
+
+}
+.libre1{
+    background-color:red;
+    top: 300px;
+    left: 50%;
+    z-index: 2;
+    }
+
+.libre2{
+background-color: green;
+top: 250px;
+left: 52%;
+z-index: 1;
+}
+
+.fija{
+    border: 1px solid black;
+    background-color:blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    }
