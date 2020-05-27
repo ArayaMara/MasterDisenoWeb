@@ -67,3 +67,61 @@ transition: 300ms;
 #header h1 a{
     color: #70b231;
 }
+
+/*BARRA DE NAVEGACION*/
+
+#nav{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    font-family: sans-serif, Arial, Helvetica, sans-serif
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray ;
+}
+
+#nav ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1090px;
+
+}
+
+#nav > ul > li {
+
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+#nav > ul > li a {
+ display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#nav > ul > li > a:first-child{
+    border-left: 1px solid gray;
+}
+
+#nav > ul > li:hover{
+    background-color: #70b231;
+    box-shadow: 0px 0px 4px green inset;
+}
+
+/*MENU DESPLEGABLE*/
+
+#nav > ul > li >ul{
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
