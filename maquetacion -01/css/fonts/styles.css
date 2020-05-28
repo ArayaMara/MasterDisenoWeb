@@ -119,9 +119,29 @@ transition: 300ms;
 #nav > ul > li >ul{
     display: none;
     position: absolute;
-    color: white;
-    text-align: left;
     width: 160px;
     box-shadow: 0px 2px 2px gray;
     z-index: 1;
+}
+
+#nav > ul > li:hover > ul{
+    display: block;
+}
+
+#nav > ul > li:hover > ul > li{
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: 300msS;
+}
+
+#nav > ul > li:hover > ul > li a{
+color: rgb(123, 119, 119);
+}
+
+#nav > ul > li:hover > ul > li:hover{
+ background-color: rgb(209, 202, 202);
+ box-shadow: 0px 0px 0px inset #ccc;
 }
