@@ -2,11 +2,11 @@
 
 @font-face{
     font-family: "nevis";
-    src: url(fonts/nevis.eot);
-    src: url(fonts/nevis.eot?#iefix) format(embedded-opentype);
-    src: url(fonts/nevis.wolf) format(wolf);
-    src: url(fonts/nevis.ttf) format(ttf);
-    src: url(fonts/nevis.svg) format(svg);
+    src: url("fonts/nevis.eot");
+    src: url("fonts/nevis.eot?#iefix") format("embedded-opentype");
+    src: url("fonts/nevis.woff") format("wolf");
+    src: url("fonts/websymbols-regular-webfont.ttf") format("ttf");
+    src: url("fonts/nevis.svg") format("svg")";
     font-weight: normal;
     font-style: normal;
 }
@@ -18,6 +18,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "iconos";
+    src: url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
+    url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype");
+    src: url("fonts/websymbols-regular-webfont.woff") format("wolf");
+    src: url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 /*ESTILOS GENERALES*/
 
 *{
@@ -49,6 +59,23 @@ color: #9b2122 !important;
 
 .blue{
 color: #0c73f2 !important;
+}
+
+.orange{
+
+    color: #d69d2a !important;
+}
+
+.icono{
+    font-family: "iconos";
+    float: left;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
 }
 /*FORMULARIOS*/
 input[type="text"],
@@ -234,6 +261,7 @@ color: rgb(123, 119, 119);
     width: 1250px;
     min-height: 1100px;
     margin: 0px auto;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
 }
 
 /*BARRA LATERAL*/
@@ -251,7 +279,7 @@ color: rgb(123, 119, 119);
 }
 
 #frase{
-    clear: both;
+    /*clear: both;*/
     padding: 10px;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
@@ -343,6 +371,7 @@ text-align: center;
 padding-top: 20px;
 padding-bottom: 10px;
 border-bottom: 1px solid #ccc;
+margin-top: -20px;
 }
 
 #section section{
@@ -366,4 +395,40 @@ border-bottom: 1px solid #ccc;
 #section .date{
     color: gray;
     font-size: 14px;
+}
+
+#section .stickerone,
+#section .stickertwo{
+    position: absolute;
+    margin: -38px;
+    z-index: 0;
+    margin-left: 5px;
+}
+
+#section .stickertwo{
+    margin-left: 860px;
+}
+
+#history{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}
+
+/*pie de pagina*/
+
+#footer{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-shadow: 0px 0px 2px gray;
+
 }
