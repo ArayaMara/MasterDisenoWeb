@@ -36,10 +36,13 @@ body{
 }
 
 .wrap{
-    width: 1200px;
+    width: 1250px;
     margin: 0px auto;
 }
 
+.gear, .icon{
+    font-family: "WebSymbolsRegular";
+}
 
 /*CABECERA*/
 
@@ -84,7 +87,100 @@ margin: 8px;
 margin-left: 26px;
 }
 
-.gear{
-    font-family: "WebSymbolsRegular";
+
+#menu{
+    float: right;
+    height: 70px;
+    background: transparent;
 }
 
+#menu ul li{
+    font-size: 24px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+
+#menu ul a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all 200ms;
+
+}
+
+#menu ul a:hover{
+    color: #37bcf9;
+    transform: scale(1.2, 1.2);
+}
+
+/*BANER*/
+
+#baner{
+    width: 95.5%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background: url(../img/bakbaner.png);
+    background-position: -200px -200px;
+    margin: 20px auto;
+}
+
+#baner h1{
+    width: 850px;
+    display: block;
+    font-family: "BebasNeue";
+    color: white;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 27px auto;
+    font-weight: normal;
+    text-shadow: 2px 2px 1px black;
+   
+}
+
+
+/*TARJETAS*/
+
+.card{
+overflow: hidden;
+margin: 20px;
+margin-top: 40px;
+width: 205px;
+height: 305px;
+border: 1px solid #ccc;
+box-shadow: 1px 1px 1px #ddd;
+float: left;
+background: white;
+cursor: pointer;
+}
+
+.card .icon{
+    display: block;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+
+}
+
+.card .category{
+    width: 100%;
+    height: 50px;
+    font-family: "TrebuchetMs";
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #00538c;
+}
+
+.card .description{
+    text-align: center;
+    font-family: "TrebuchetMs";
+    color: #026fb8;
+    font-size: 15px;
+
+}
