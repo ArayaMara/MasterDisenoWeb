@@ -234,6 +234,11 @@ margin-bottom: 15px;
     border-radius: 5px;
     background-color: transparent;
     color: #ccc;
+    transition: all 30ms;
+}
+
+#lateral input[type="text"]:focus{
+    color: #555555;
 }
 
 #lateral input[type="button"],
@@ -247,4 +252,5 @@ border: none;
 border-left: 1px solid #ccc;
 color: #555555;
 padding-left: 7px;
+
 }
