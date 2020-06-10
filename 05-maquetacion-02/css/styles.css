@@ -73,6 +73,13 @@ margin-left: 20px;
 
 }
 
+#logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+
+}
+
 #logo h3{
     font-size: 40px;
     display: block;
@@ -83,6 +90,20 @@ margin-left: 20px;
 
 }
 
+#logo:hover h3{
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight{
+
+    from{
+        transform: translateX(200%);
+    }
+
+    to{
+        transform: translateX(0%);
+    }
+}
 #logo .gear{
 
     display: block;
@@ -90,7 +111,40 @@ margin-left: 20px;
     font-size: 30px;
 margin: 8px;
 margin-left: 26px;
+animation-name: rotate-gear;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
 }
+
+@keyframes rotate-gear{
+    from {
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear{
+
+animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow{
+0%{
+    transform: translateY(0%);
+}
+
+50%{
+    transform: translateY(200%)
+}
+
+100%{
+    transform: translateY(0%)
+}
+}
+
 
 
 #menu{
@@ -130,6 +184,17 @@ margin-left: 26px;
     background: url(../img/bakbaner.png);
     background-position: -200px -200px;
     margin: 20px auto;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
 }
 
 #baner h1{
@@ -142,9 +207,34 @@ margin-left: 26px;
     margin: 27px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
-   
+   animation: showText 10s linear;
 }
 
+@keyframes showText{
+    0%{ transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 0;
+        text-shadow: none;
+        color: transparent;
+
+    }
+    100%{  
+        transform: translateX(0%) scale(1,1);
+        opacity: 1;
+        text-shadow: 2px 2px 1px black;
+        color: white;
+
+    }
+}
 
 /*TARJETAS*/
 
@@ -159,8 +249,12 @@ box-shadow: 1px 1px 1px #ddd;
 float: left;
 background: white;
 cursor: pointer;
+transition: all 300ms;
 }
 
+.card:hover{
+    background-color: black;
+}
 .card .icon{
     display: block;
     width: 100%;
@@ -172,6 +266,21 @@ cursor: pointer;
 
 }
 
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon{
+    from{
+        transform: translateY(-200%);
+    }
+
+    to{
+        transform: translateY(0%);
+    }
+}
 .card .category{
     width: 100%;
     height: 50px;
@@ -180,16 +289,47 @@ cursor: pointer;
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
 }
 
+.card:hover .category{
+color: white;
+animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory{
+    from {
+        transform: translateY(-300%);
+        color: black;
+    }
+
+    to{ transform: translateY(0%);
+    color: white;
+    }
+}
 .card .description{
     text-align: center;
     font-family: "TrebuchetMs";
     color: #026fb8;
     font-size: 15px;
-
+transition: all 300ms;
 }
 
+.card:hover .description{
+color: white;
+animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+        color: white;
+    }
+}
 /*BARRA LATERAL*/
 
 #lateral{
@@ -364,6 +504,30 @@ box-shadow: 1px 1px 1px grey inset;
     margin-bottom: 20px;
 }
 
+#social .overlay{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #f4f7fe;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -52px;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
 /*Articulos*/
 
 #articles{
@@ -445,6 +609,7 @@ box-shadow: 1px 1px 1px grey inset;
         line-height: 100px;
       margin-top: 60px;
       text-align: center;
+      transition: all 1ms;
       
   }
 
@@ -454,8 +619,41 @@ box-shadow: 1px 1px 1px grey inset;
     letter-spacing: 3px;
     text-decoration: none;
     color: #00538c;
+    transition: all 1ms;
   }
 
+  #blog:hover{
+     border: 10px solid #37bcf9;
+     border-radius: 240px;
+     box-shadow: 0px 0px 10px gray;
+     background-color: #333;
+     animation: blink 10s infinite linear;
+
+  }
+
+  @keyframes blink{
+      0%{
+          border: 10px solid #37bcf9;
+      }
+
+      25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid white;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
+  }
+
+  #blog:hover a{
+      color: white;
+      text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black,1px 5px 1px black,1px 6px 1px black;
+  }
   /*footer*/
 
   #footer{
@@ -493,6 +691,7 @@ font-family: "TrebuchetMs";
       font-size: 40px;
       font-family: "BebasNeue";
           text-align: center;
+          margin-bottom: 10px;
          
   }
 
@@ -509,3 +708,30 @@ font-family: "TrebuchetMs";
       border-bottom: 1px solid #ccc;
       
   }
+
+  #footer ul li a{
+      display: block;
+      height: 40px;
+      transition: all 300ms;
+  }
+
+  #footer ul li:hover a{
+    padding-left: 40px;
+    color: white;
+    width: 100%;
+}
+  #footer iframe{
+      width: 100%;
+      height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+#footer img{
+    margin-bottom: 10px;
+
+}
+
+#footer #browser img{
+    width: 45px;
+}
