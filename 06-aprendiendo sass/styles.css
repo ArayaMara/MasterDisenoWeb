@@ -1,0 +1,94 @@
+body {
+  background-color: #49b449;
+}
+
+h1 {
+  font-family: arial, helvetica, sans-serif;
+  color: red;
+}
+
+p {
+  color: #942a2a;
+}
+
+.caja {
+  border: 1px solid black;
+  width: 500px;
+  text-align: center;
+  margin: 0px auto;
+  background-color: #ccc;
+  padding: 10px;
+}
+.caja h1 {
+  color: 0;
+}
+.caja p {
+  color: 0;
+}
+.caja .info {
+  font-size: 10px;
+}
+.caja .info .author {
+  font-size: 8px;
+  color: gray;
+}
+
+/*@mixin crearBordes() {
+border: 1px solid red;
+border-radius: 5px;
+box-shadow: 0px 0px 5px black;*/
+.caja {
+  border: 10px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.listado {
+  border: 5px solid blue;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.alert-sucess, .alert-danger, .alert {
+  border: 1px solid gray;
+  background-color: #ccc;
+  color: white;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.alert-danger {
+  color: black;
+  background-color: red;
+}
+
+.alert-sucess {
+  color: black;
+  background-color: blue;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.caja {
+  float: left;
+  width: 22.2222222222%;
+  margin: 10px;
+}
+
+.cajas {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

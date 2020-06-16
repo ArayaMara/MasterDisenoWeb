@@ -1,0 +1,113 @@
+//VARIABLES
+$fuente-tipica: arial,
+helvetica,
+sans-serif;
+$color-fondo: rgb(73, 180, 73);
+$color-letra: red;
+$color-secundario: rgb(148, 42, 42);
+body {
+    background-color: $color-fondo;
+}
+
+h1 {
+    font-family: $fuente-tipica;
+    color: $color-letra;
+}
+
+p {
+    color: $color-secundario;
+}
+
+//ANIDACION
+.caja {
+    border: 1px solid black;
+    width: 500px;
+    text-align: center;
+    margin: 0px auto;
+    background-color: #ccc;
+    padding: 10px;
+    h1 {
+        color: blue($color: #000000);
+    }
+    p {
+        color: green($color: #000000);
+    }
+    .info {
+        font-size: 10px;
+        .author {
+            font-size: 8px;
+            color: gray;
+        }
+    }
+}
+
+//MIXIN / funciones
+
+/*@mixin crearBordes() {
+border: 1px solid red;
+border-radius: 5px;
+box-shadow: 0px 0px 5px black;*/
+
+@mixin crearBordes($color, $size, $shadow) {
+    border: $size solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+
+.caja {
+    @include crearBordes(red, 10px, black);
+}
+
+.listado {
+    @include crearBordes(blue, 5px, black);
+}
+
+//Herencia
+%alert-normal {
+    border: 1px solid gray;
+    background-color: #ccc;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.alert {
+    @extend %alert-normal;
+}
+
+.alert-danger {
+    @extend %alert-normal;
+    color: black;
+    background-color: red;
+}
+
+.alert-sucess {
+    @extend %alert-normal;
+    color: black;
+    background-color: blue;
+}
+
+//OPERACIONES
+h1 {
+    font-size: 20px + 5px;
+}
+
+$caja: 200px;
+$wrap: 900px;
+.caja {
+    float: left;
+    width: $caja /$wrap *100%;
+    margin: 10px;
+}
+
+.cajas {
+    width: $wrap;
+    margin: 0px auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+//CONDICIONALES
