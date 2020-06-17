@@ -88,6 +88,50 @@ h1 {
 }
 
 h1 {
+  color: black;
+}
+
+.listado ul li:nth-child(1) {
+  color: blue;
+  font-size: 3px;
+}
+
+.listado ul li:nth-child(2) {
+  color: blue;
+  font-size: 6px;
+}
+
+.listado ul li:nth-child(3) {
+  color: blue;
+  font-size: 9px;
+}
+
+.listado ul li:nth-child(4) {
+  color: blue;
+  font-size: 12px;
+}
+
+.listado ul li:nth-child(5) {
+  color: blue;
+  font-size: 15px;
+}
+
+.listado ul li:nth-child(6) {
+  color: blue;
+  font-size: 18px;
+}
+
+.listado ul li:nth-child(7) {
+  color: blue;
+  font-size: 21px;
+}
+
+.listado ul li:nth-child(8) {
+  color: blue;
+  font-size: 24px;
+}
+
+h1 {
   text-decoration: underline;
 }
 

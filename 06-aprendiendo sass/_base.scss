@@ -111,3 +111,23 @@ $wrap: 900px;
 }
 
 //CONDICIONALES
+h1 {
+    @if $color-letra==#ccc {
+        color: blue
+    }
+    @else if $color-letra==red {
+        color: black
+    }
+    @else {
+        color: lightcoral
+    }
+}
+
+//bucle
+$contador: 1;
+@for $contador from 1 through 8 {
+    .listado ul li:nth-child(#{$contador}) {
+        color: blue;
+        font-size: $contador *3px;
+    }
+}
