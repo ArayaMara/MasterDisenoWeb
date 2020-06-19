@@ -9,12 +9,15 @@ body {
     /*flex-wrap: wrap;
     flex-direction: left;*/
     flex-flow: row wrap;
+    align-items: center;
+    height: 600px;
+    justify-content: space-between;
     border: 3px solid black;
     padding: 5px;
 }
 
 .caja {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     /*flex-basis: calc((100% / 3) - 68px);*/
     font-size: 20px;
     font-weight: 20px;
@@ -29,21 +32,25 @@ body {
 .red {
     order: 4;
     background: var(--rojo);
-    flex-basis: 100%;
+    /*flex-basis: 100%;*/
+    align-self: flex-end;
 }
 
 .green {
     /*background: var(--rojo);----variable*/
     order: 1;
     background: green;
+    align-self: flex-start;
 }
 
 .blue {
     background: blue;
     order: 2;
+    margin-top: -20%;
 }
 
 .orange {
     order: 3;
     background: orange;
+    align-self: center;
 }
